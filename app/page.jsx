@@ -1,15 +1,17 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Hero from "@/components/HomeContent/HeroSection";
+import IceHeroSection from "@/components/HomeContent/IceHeroSection";
+// import Hero from "@/components/HomeContent/HeroSection";
 
 
 export default function HomePage() {
   return (
     <>
       <Header />
-      <main>
+      <main className="container">
         {/* Home content */}
-        <Hero />
+        {/* <Hero /> */}
+        <IceHeroSection />
       </main>
       <Footer />
     </>

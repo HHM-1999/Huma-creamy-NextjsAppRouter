@@ -19,3 +19,34 @@ body,
   height: 50px;
 
 }
+li{
+  font-family: Roboto,sans-serif !important;
+}
+
+/* Hero section  */
+/* .carousel-item {
+  transition: transform 1.2s ease, opacity 1.2s ease-in-out;
+} */
+
+.slide-image {
+  object-fit: cover;
+  /* height: 600px; */
+  animation: zoomIn 5s ease-in-out infinite alternate;
+}
+
+/* @keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+} */
+
+.carousel-caption h5 {
+  background: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.75rem;
+}
