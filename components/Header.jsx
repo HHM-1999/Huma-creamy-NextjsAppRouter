@@ -20,7 +20,7 @@ export default function Header() {
         >
           <span className="navbar-toggler-icon" />
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        {/* <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link href="/" className="nav-link active" aria-current="page">
@@ -44,7 +44,36 @@ export default function Header() {
               </Link>
             </li>
           </ul>
-        </div>
+        </div> */}
+                {/* Navigation */}
+                <nav className="main-nav">
+          <a href="/" className="nav-link active">
+            Home
+          </a>
+
+          <a href="/flavors" className="nav-link">
+            Flavors
+          </a>
+
+          <a href="/about" className="nav-link">
+            About
+          </a>
+
+          <a href="/story" className="nav-link">
+            Our Story
+          </a>
+
+          <a href="/careers" className="nav-link">
+            Careers
+          </a>
+
+          <span className="nav-divider"></span>
+
+          <a href="/order" className="order-btn">
+            Order Now
+            <span className="cart-icon">🛒</span>
+          </a>
+        </nav>
       </div>
     </nav>
   );
