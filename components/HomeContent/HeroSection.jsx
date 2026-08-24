@@ -27,7 +27,7 @@ const Hero = () => {
   return (
     <section className="hero-section">
       <div className="container">
-        <div className="row align-items-center min-vh-75">
+        <div className="row align-items-center ">
 
           {/* Left Content */}
           <div className="col-lg-6 col-md-7">

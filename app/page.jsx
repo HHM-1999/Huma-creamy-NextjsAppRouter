@@ -1,5 +1,8 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import AboutUs from "@/components/HomeContent/AboutUs";
+import BestSellers from "@/components/HomeContent/BestSellers";
+import Contact from "@/components/HomeContent/Contact";
 import Hero from "@/components/HomeContent/HeroSection";
 import SignatureFlavors from "@/components/HomeContent/SignatureFlavors";
 // import IceHeroSection from "@/components/HomeContent/IceHeroSection";
@@ -15,7 +18,12 @@ export default function HomePage() {
         <Hero />
         {/* SignatureFlavors  */}
         <SignatureFlavors />
-        {/* <IceHeroSection /> */}
+        {/* About Us  */}
+        <AboutUs />
+        {/* Best seller */}
+        <BestSellers />
+        {/* Contact */}
+        <Contact />
       </main>
       <Footer />
     </>
