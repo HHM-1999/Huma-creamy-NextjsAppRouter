@@ -7,6 +7,95 @@ body,
   height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+/* ================================
+   MOBILE MENU BUTTON
+================================ */
+
+.mobile-menu-btn {
+  display: none;
+
+  width: 45px;
+  height: 45px;
+
+  padding: 9px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.mobile-menu-btn span {
+  display: block;
+  width: 25px;
+  height: 2px;
+
+  background: #5b3a29;
+  border-radius: 5px;
+
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation */
+
+.mobile-menu-btn.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 575px) {
+
+  .header-container {
+    min-height: 68px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .logo-area img {
+    width: 115px;
+  }
+
+  .mobile-menu-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .main-nav {
+    padding: 12px 15px 18px;
+  }
+
+  .main-nav .nav-link {
+    font-size: 15px;
+  }
+
+  .order-btn {
+    font-size: 15px;
+    padding: 10px 18px;
+  }
+}
 
 /* navbar section */
 .Dheader{
@@ -3441,5 +3530,187 @@ li{
     align-items: flex-start;
 
     text-align: left;
+  }
+}
+
+.back-to-top {
+  position: fixed;
+
+  right: 28px;
+  bottom: 28px;
+
+  width: 58px;
+  height: 58px;
+
+  border: 2px solid #e58a20;
+
+  border-radius: 50%;
+
+  background: #fff8eb;
+
+  color: #6a3213;
+
+  cursor: pointer;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(25px) scale(0.75);
+
+  box-shadow:
+    0 8px 22px rgba(100, 52, 15, 0.16);
+
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease,
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Visible */
+
+.back-to-top.show {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0) scale(1);
+}
+
+/* Hover */
+
+.back-to-top:hover {
+  /* background: #e5841c; */
+
+  color: white;
+
+  transform: translateY(-6px) scale(1.08);
+
+  box-shadow:
+    0 12px 28px rgba(196, 104, 18, 0.28);
+}
+
+/* =========================================
+   ICE CREAM
+========================================= */
+
+.back-to-top-scoop {
+  position: absolute;
+
+  top: -2px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 20px;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.3s ease;
+}
+
+.back-to-top:hover .back-to-top-scoop {
+  opacity: 1;
+
+  transform:
+    translateX(-50%)
+    translateY(-4px)
+    rotate(-8deg);
+}
+
+/* =========================================
+   ARROW
+========================================= */
+
+/* .back-to-top-arrow {
+  position: relative;
+
+  z-index: 2;
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  transition:
+    transform 0.3s ease;
+} */
+.back-to-top-arrow img{width: 80px;}
+.back-to-top-arrow {
+  transform: translateY(3px);
+
+  animation: arrowBounce 0.8s infinite;
+}
+
+@keyframes arrowBounce {
+  0%,
+  100% {
+    transform: translateY(3px);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+/* =========================================
+   RIPPLE
+========================================= */
+
+.back-to-top-ripple {
+  position: absolute;
+  inset: 8px;
+  animation: rotateRipple 8s linear infinite; 
+  pointer-events: none;
+}
+
+@keyframes rotateRipple {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   CLICK ANIMATION
+========================================= */
+
+.back-to-top:active {
+  transform: translateY(-2px) scale(0.94);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .back-to-top {
+    width: 50px;
+    height: 50px;
+
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .back-to-top-arrow {
+    font-size: 22px;
+  }
+
+  .back-to-top-scoop {
+    font-size: 17px;
   }
 }
